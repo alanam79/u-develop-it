@@ -3,9 +3,9 @@ const db = require("./db/connection");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
-const inputCheck = require("./utils/inputCheck");
-// Add near the top of the file
-const apiRoutes = require("./routes/apiRoutes");
+
+// Add near the top of the file - when not specificed, the app will default to index, its the universal default
+const apiRoutes = require('./routes/apiRoutes');
 
 // express middlewarre
 app.use(express.urlencoded({ extended: false }));
