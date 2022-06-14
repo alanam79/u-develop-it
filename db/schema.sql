@@ -27,6 +27,8 @@ CREATE TABLE voters (
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+-- foreign key being used for voter_id, uc_voter means the values inserted
+-- must be unique. 
 CREATE TABLE votes (
   id INTEGER AUTO_INCREMENT PRIMARY KEY,
   voter_id INTEGER NOT NULL,
